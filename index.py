@@ -36,4 +36,19 @@ class Solution(object):
             j -= 1  # Move the pointer in nums2 backwards.
             k -= 1  # Move the merge position backwards.
 
+    # Question 2
+            
+    class Solution(object):
+        def removeElement(self, nums, val):
+            """
+            :type nums: List[int]
+            :type val: int
+            :rtype: int
+            """
+            insertPosition = 0
+            for num in nums:
+                if num != val:
+                    nums[insertPosition] = num
+                    insertPosition += 1
+            return insertPosition
 
