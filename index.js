@@ -46,3 +46,24 @@ class Solution {
     }
 }
 
+// Question 3
+
+class Solution {
+    removeDuplicates(nums) {
+        if (nums.length === 0) {
+            return 0;
+        }
+
+        let insertPosition = 0;
+
+        for (let i = 0; i < nums.length; i++) {
+            if (i === nums.length - 1 || nums[i] !== nums[i + 1]) {
+                nums[insertPosition] = nums[i];
+                insertPosition++;
+            }
+        }
+
+        return insertPosition;
+    }
+}
+

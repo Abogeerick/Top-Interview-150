@@ -52,3 +52,21 @@ class Solution(object):
                     insertPosition += 1
             return insertPosition
 
+# Question 3
+
+class Solution(object):
+    def removeDuplicates(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        if not nums:
+            return 0
+        insertPosition = 0
+        for i in range(len(nums)):
+            if i == len(nums) - 1 or nums[i] != nums[i + 1]:
+                nums[insertPosition] = nums[i]
+                insertPosition += 1
+
+        return insertPosition
+
